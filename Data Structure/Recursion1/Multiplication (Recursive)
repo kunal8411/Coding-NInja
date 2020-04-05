@@ -1,0 +1,41 @@
+Given two integers m & n, calculate and return their multiplication using recursion. You can only use subtraction and addition for your calculation. No other operators are allowed.
+Input format : m and n (in different lines)
+
+Sample Input :
+3 
+5
+Sample Output -
+15
+
++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+public class solution {
+
+	public static int multiplyTwoIntegers(int m, int n){
+		// Write your code here
+        
+	if(m==1)
+    {
+        return n;
+    }
+        if(m==0)
+        {
+            return 0;
+            
+        }
+        if(n==0)
+        {
+            return 0;
+        }
+        int ans=n+multiplyTwoIntegers(--m,n);
+        return ans;
+        
+        
+	}
+    public static void main(String[] args)
+    {
+        int x=3;
+        int y=4;
+        System.out.println(multiplyTwoIntegers(x,y));
+    }
+}
